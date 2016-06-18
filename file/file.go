@@ -7,11 +7,14 @@ func main() {
 
 	if _, err := os.Stat("hoge/fuga/piyo"); err == nil {
 		fmt.Println("already file is exist")
-		os.Exit(0)
+		return
 	}
 
-	if _, err := os.Create("hoge/fuga/piyo"); err != nil {
-		fmt.Println(err)
-		os.Exit(0)
+	f, err := os.Create("hoge/fuga/piyo")
+	if err != nil {
+		panic(err)
 	}
+
+	defer f.Close()
+
 }
