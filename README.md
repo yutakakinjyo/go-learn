@@ -2,6 +2,18 @@
 
 - [A Tour of Go](https://tour.golang.org/welcome/1)
 
+# Env
+
+```
+$ brew install go
+```
+
+# Testing
+
+```
+$ go test
+```
+
 # Editor
 
 ## Emacs
